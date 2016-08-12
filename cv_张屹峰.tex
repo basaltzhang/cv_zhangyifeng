@@ -1,0 +1,273 @@
+%%% LaTeX Template: Curriculum Vitae
+%%%
+%%% Source: http://www.howtotex.com/
+%%% Feel free to distribute this template, but please keep the referal to HowToTeX.com
+%%% Date: July 2011
+
+%%% ------------------------------------------------------------
+%%% BEGIN PREAMBLE
+%%% ------------------------------------------------------------
+\documentclass[paper=a4,fontsize=11pt, CJK]{scrartcl}	
+	
+\usepackage[english]{babel}
+%\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{ccmap}
+\usepackage{CJK}
+
+\usepackage{amsmath,amsfonts,amsthm}
+\usepackage[pdftex]{graphicx}
+%\usepackage{graphicx}
+\usepackage[bookmarks=true,
+            bookmarksopen=true,
+            colorlinks,
+            citecolor=blue,
+            linkcolor=blue,
+            urlcolor=blue,
+            breaklinks=true
+            ]{hyperref}
+\usepackage{breakurl}
+%\usepackage{hyperref}
+\usepackage[svgnames]{xcolor}
+\usepackage[top=15ex, bottom=15ex, left=15ex, right=15ex]{geometry}
+	\textheight=700px
+\usepackage{url}
+\usepackage{wrapfig}
+
+\frenchspacing
+\pagestyle{empty}		% No pagenumbers/headers/footers
+%\usepackage{bbding}	% Symbols
+
+
+\usepackage{sectsty}	% Custom sectioning
+
+\sectionfont{%			% Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%			% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{3pt}
+	}
+
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}			% Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+
+\newcommand{\MyName}[1]{
+		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1 		% Name
+		\par \normalsize \normalfont}
+		
+\newcommand{\MySlogan}[1]{
+		\large \usefont{OT1}{phv}{m}{n}\hfill #1 % Slogan (optional)
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\TableEntry}[2]{
+		\noindent\hangindent=2em\hangafter=0 	% Indentation
+		\parbox{\spacebox}{
+		\textit{#1}}							% Title (birth, address, skills, etc.)
+		\hspace{1.5em} #2 \par}					% Entry
+
+\newcommand{\MyDetailEntry}[2]{
+		\noindent \hangindent=0em\hangafter=0 #1 \hfill 	% Title
+		\colorbox{Grey}{%
+			\parbox{9em}{%
+		\color{White}\texttt{#2}}} \par						% Time
+%		\noindent \hangindent=3em\hangafter=0\textit{#3} \par		% Place, School, Company, etc.
+%		\noindent\hangindent=3em\hangafter=0 \small #4 			% Description
+		\normalsize \par}
+
+\newcommand{\DetailEntry}[4]{
+		\noindent \hangindent=2em\hangafter=0 \textbf{#1} \hfill 	% Title
+		\colorbox{Grey}{%
+			\parbox{9em}{%
+			\hfill\color{White} \texttt{#2}}} \par						% Time
+		\vspace{0.2em}
+		\noindent \hangindent=3em\hangafter=0\textit{#3} \par		% Place, School, Company, etc.
+		\noindent\hangindent=3em\hangafter=0 \small #4 			% Description
+		\normalsize \par}
+
+\newcommand{\BasicEntry}[3]{
+		\noindent \hangindent=2em\hangafter=0 \textbf{#1} \hfill 	% Title
+		\colorbox{Grey}{\parbox{9em}{\color{White}\texttt{#2}}} % Time
+        \par						
+		\vspace{0.2em}
+		\noindent\hangindent=3em\hangafter=0 \small #3 			% Description
+		\normalsize \par}
+
+\newcommand{\SimpleEntry}[2]{
+		\noindent \hangindent=2em\hangafter=0 {#1} \hfill 	% Description
+		\colorbox{Grey}{%
+			\parbox{3.6em}{%
+			\hfill\color{White}\texttt{#2}}} \par					% Time
+		%\hfill{\texttt{#2}}
+        \normalsize \par}
+
+\newcommand{\WordsEntry}[1]{
+		\noindent \hangindent=2em\hangafter=0 {#1} \hfill 	% Words
+		\normalsize \par}
+
+%作者，题名，期刊，年份
+\newcommand{\PaperEntry}[6]{
+        \par
+        \noindent \hangindent=2em\hangafter=0 {#1} {#2} \emph{#3} {\texttt{#4}} \hfill {#5}
+        \par
+        \hangindent=2em\hangafter=0
+        {\color{black!55}{{#6}}}
+        \vspace{0.2em}
+}
+
+%%% ------------------------------------------------------------
+%%% BEGIN DOCUMENT
+%%% ------------------------------------------------------------
+
+\begin{document}
+\begin{CJK*}{GBK}{kai}
+\begin{wrapfigure}{l}{0.5\textwidth}						%Insert a picture if needed
+	\vspace*{-5em}
+		\includegraphics[width=0.15\textwidth]{pic4}
+\end{wrapfigure}
+
+\MyName{张~~~屹~~~峰\small{\texttt{}}}
+
+%\MySlogan{天津大学计算机科学与技术学院}
+
+%\sepspace
+
+%%% Personal details
+\TableEntry{}{\texttt{}}
+\NewPart{个人信息}{}
+\hangindent=2em\hangafter=0 男，汉族，\texttt{1990~年~6~}月生，未婚。
+\vspace*{0.2em}
+
+\TableEntry{联系电话}{\texttt{15922220617}}
+\TableEntry{电子邮件}{\url{basaltzhang@gmail.com}}
+\TableEntry{个人主页}{\url{http://blog.csdn.net/xuanwu_yan}}
+%\TableEntry{}{}
+
+\NewPart{求职意向}{}
+
+\TableEntry{}{\texttt{深度学习工程师}}
+
+
+%\TableEntry{计算机视觉算法工程师}
+%\MyDetailEntry{\textbf{机器学习工程师}}{}
+%%% Education
+\NewPart{教育背景}{}
+
+\MyDetailEntry{\textbf{天津大学}~~~~~~~~计算机科学与技术学院~~ 计算机科学与技术~~工学硕士}{2012/09 - 2015/01}
+\MyDetailEntry{\textbf{天津大学}~~~~~~~~计算机科学与技术学院~~ 计算机科学与技术~~工学学士}{2008/09 - 2012/06}
+
+\NewPart{工作背景}{}
+\MyDetailEntry{\textbf{1.百度}~~~~~~图片搜索部~~ 图片信息库组~~~~实习算法工程师 }{2014/08 - 2014/10 }
+\textbf{ \\ 主要职责：}
+\begin{itemize}
+\item 参加搜索知心人物图片匹配项目，提升人物图片与姓名匹配率。基于Hadoop处理千万级别数据。
+\item 参与旅游子景点数据挖掘项目，调研业界常用方法，基于图片+文字识别子景点。
+\end{itemize}
+\MyDetailEntry{\textbf{2.美团网}~~~~到店餐饮平台~~~交易与信息中心 ~~~信息组~~~~后台研发工程师 }{2015/02 - 今 }
+\textbf{ \\ 主要职责：}
+\begin{itemize}
+\item 负责前台地理信息系统，城市商圈数据管理、基础组件以及上层应用开发。
+\item 负责pc端搜索、筛选页面结果展示。
+\item 负责美团网ApiDiffy回归测试平台。
+\end{itemize}
+\NewPart{个人技能}{}
+
+\begin{itemize}
+%\item 精通~$\text{MATLAB}^{\text{\circledR}}$~、Python、C/C$++$语言。
+\item 熟悉Linux 下C/C++ 编程；熟悉java，php，python及matlab编程。 
+\item 扎实的数据结构，算法以及数理统计相关知识基础。
+\item 熟悉Map-Reduce, MPI等分布式计算框架，具备相关开发经验。
+\item 熟悉基本的机器学习算法，推荐算法和搜索算法。
+\item 较强的英文听说读写能力。
+%\item 精通统计机器学习算法，如线性回归，逻辑回归，贝叶斯分类器，SVM，神经网络\\
+%熟悉HMM，MRF等算法。
+%\item 精通聚类分析算法，对非监督特征学习(如：sparse coding，AutoEncoder)，k-means，\\
+ %     PCA，EM，KNN，谱聚类以及对深度学习等算法有一定了解。
+
+%\item 熟悉大数据海量信息处理工具，对MapReduce有基本了解。
+%\item 熟练掌握图像处理、计算机视觉、模式识别方向的基本算法，并能应用到相关课题中。
+%对CUDA~ 并行编程模型有较深理解，能够胜任常见的多核、GPU~ 编程需要。
+    %精通~$\text{MATLAB}^{\text{\circledR}}$~、Python、C/C$++$语言，能够胜任相关论文及最前沿技术的重现工作。对多线程、CUDA~ 等并行编程模型有较深理解，能够胜任常见的多核、GPU~ 编程需要。
+%\item 熟练掌握CUDA并行编程技术,熟练使用OpenCV等开发工具.
+%\item 在数理统计，随机过程方面有扎实数学基础，对概率图模型，矩阵论及最优化有基本了解。
+
+
+%\item 良好的团队合作精神和自学能力。
+\end{itemize}
+%%% Work experience
+
+\NewPart{项目经历}{}
+\PaperEntry{\texttt{[1]}  \textbf{利用超像素加速稀疏编码模型}}  {( 2013.6--2015.1)}{\\}
+{ 参与天津市科技支撑项目“古代壁画典型病害微小变化检测与度量关键技术”项目。负责项目中利用稀疏编码进行的交互式病害区域标识相关课题，设计了一种新的使用稀疏编码进行快速特定病害识别的模型。在此模型中预先使用超像素对图像过分割，根据超像素内部特征高内聚性，以点特征代替区域特征，使用稀疏编码根据预先学习的字典对图像进行重构，利用重构误差对区域分类。专利~4~篇。} {\\}
+
+\PaperEntry{\texttt{[2]}  \textbf{参加百度竞赛} } {(2013.9--2013.10)}{\\}
+{在火眼金睛中，对图像有无人分类中使用~Alexnet，设计~10~层神经网络结构并根据~30000~个实验数据训练分类模型，最终正确率达到~98\%；同时在慧眼识人中对分割图片中人像使用~Histogram Sparse Coding + Grab Cut~方法，正确率达到~67\%。}{\\}
+
+\PaperEntry{\texttt{[3]}  \textbf{网络差分进化算法} } {(2013.10--2014.8)}{\\}
+{对给定最小化目标函数与变量值域的基础上，快速选择最优变量值得到最优解。与传统的模拟退火(SA)和差分进化(DE)相比，网络差分进化(Nest Differential Evolution, NestDE)收敛速度快，不已陷入局部最优。本算法中，内层DE首先随机初始化搜索种群，通过插值方法更新种群，并以概率修改变量值。外层~DE~通过控制内层~DE~插值参数和概率参数，减少算法搜索空间，增加算法收敛速度。我们在大量~QPBF~和一种自动文本分割算法上的实验验证了我们的算法。}{\\}
+
+\PaperEntry{\texttt{[4]} \textbf{检索索引算法调研，实验和工程化} } {(2014.2--2014.4)}{\\}
+{该模块用于手机淘宝在线检索查询和离线索引构建：(1)调研：针对CNN的高维图像特征，针对哈希算法和基于学习的量化算法进行调研和实验。(2)工程化：和引擎同学进行结对编程，将基于图像特征的检索索引算法嵌入到淘宝搜索引擎中。}{\\}
+
+\PaperEntry{\texttt{[5]}  \textbf{线下淘宝排序算法研发和工程化} }  {( 2015.8--今)}{\\}
+{主要负责：(1).根据产品需求开发相关引擎。(2).基于离散化特征的LR模型。}{\\}
+
+
+
+
+%%% Honors
+\NewPart{学术成果}{}
+%\textit{et al}.}{\href{http://iipl.tk/paper/ICASSP2013/pdfs/0002114.pdf}
+\PaperEntry{\texttt{[1]} Wei Feng, Xuefei Yin, Yifeng Zhang, Lei Xie., {NestDE: Generic Parameters Tuning for Automatic Story Segmentation.}}{Soft Computing}{ 2014.}{}
+%{本文对提出一种基于相似性扩散的，协同显著性检测模型。首先，建立图像间和图像内的相似性图模型，然后，对于图像间的图模型应用匈牙利算法，进行二部图匹配；之后，进行相似性扩散；最后，生成协同显著性显著图。利用本文提出的方法，克服了已有方法运行速度慢，对多目标协同显著性检测不准确，依赖于其他显著性检测方法等缺点。}
+
+%\PaperEntry{\texttt{[2]} Wei Feng , Zhiyu Tan, Liang Wan , Jianmin Jiang.}{Adaptive Equalization of Perceptual Loudness.}{IEEE Signal Processing Letters(SPL).}{2013.}{(Submit.)}
+%{本文中，提出一种自适应的音频感知响度的估计与快速归一化方法。区别于已有算法在计算音频信号的能量值序列排序采用第95\%作为音频响度特征值，本文中提出一种自适应的采用信号能量序列中最长最稳定的序列作为音频响度特征值。}
+
+\PaperEntry{\texttt{[2]} 国家专利：冯伟，孙济洲，田飞鹏，雒伟群，张屹峰.}{面向文物微小变化检测的相机四点重定位方法.}{}{2014.}{}
+%{ZL 201210005515.1}
+%{本发明提出了一种将音频感知响度快速归一化到同一感知响度的方法。}
+
+\PaperEntry{\texttt{[3]} 国家专利：冯伟，孙济洲，田飞鹏，雒伟群，张屹峰.}{面向文物亚微米级变化检测的相机三点重定位方法.}{}{2014.}{}
+%{本发明对已有的SimRank相似度扩散算法，进行了并行化的改进，将原有的SimRank算法，应用到CUDA并行计算的框架下，在获得相同的计算精度下，大大提高了运行效率，减少了运行时间。}
+
+
+\PaperEntry{\texttt{[4]} 国家专利：冯伟，孙济洲，张屹峰，黄睿.}{一种基于全局字典特征的古代壁画病害标识方法.}{}{2015.}{}
+%{本发明提出一种超像素级的图像处理，识别及匹配技术，包括超像素融合，图像边缘提取，网格点放置及网格点间的点放置以及计算四部分。实现了将已有的像素级的图像处理，识别与匹配算法应用于超像素级，显著的提高了运行效率，缩短了计算时间。}
+
+\PaperEntry{\texttt{[5]} 国家专利：冯伟，孙济洲，张屹峰，黄睿.}{一种交互式古代壁画病害标识方法.}{2015.}{}
+%{201410025760}
+%{本发明对已有的只能对单目标并且需要依赖于其他单幅图像显著性检测的方法进行了改进。}
+
+
+
+
+
+%%% Skills
+%\NewPart{获奖经历}{}
+%\SimpleEntry{博士研究生国家奖学金}{2012/12}
+%\SimpleEntry{教育部学术新人奖}{2011/08}
+%\SimpleEntry{天津大学二等奖学金}{2010/08}
+
+%\NewPart{活动经历}{}
+%\begin{itemize}
+%    \item {}{2012-2013 天津大学软件学院-图像处理课程助教}
+%    \item 2013.7月     参加龙星计划-信息处理和人工智能的深度学习- 对深度学习（deep learning）进行学习
+%    \item 2012.7月     参加天津大学媒体技术实验室summer school-对计算机视觉及机器学习算法进行学习
+    %\item 2011-2012    天津大学软件学院-图像处理课程助教
+%\end{itemize}
+
+\NewPart{自我评价}{}
+\begin{itemize}
+    \item {对机器学习和深度学习有强烈的兴趣。}
+    \item {具备较强的工程能力，能够端到端的支持具体业务。}
+    \item {对前沿技术有一定的把握，能够胜任从技术调研到业务落地的工作。}
+    \item {具备良好的沟通能力，推动能力及协调能力。}
+\end{itemize}
+
+
+    %~~~~~对人工智能具有使命感，热爱机器学习。非常希望能够在硕士毕业后继续从事机器学习或计算机视觉算法相关工作。在硕士期间，对自己研究方向的现状、热点和趋势有深入了解，
+    %能够胜任科研及算法实现等相关的工作，已具备独立的从事科研的能力。
+
+
+\end{CJK*}
+\end{document}

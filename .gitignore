@@ -1,0 +1,8 @@
+*.aux
+*.log
+*.log
+*.out
+*.out.bak
+*.gz
+*.tex.bak
+*.tex.sav

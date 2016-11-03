@@ -1,0 +1,230 @@
+%%% LaTeX Template: Curriculum Vitae
+%%%
+%%% Source: http://www.howtotex.com/
+%%% Feel free to distribute this template, but please keep the referal to HowToTeX.com
+%%% Date: July 2011
+
+%%% ------------------------------------------------------------
+%%% BEGIN PREAMBLE
+%%% ------------------------------------------------------------
+\documentclass[paper=a4,fontsize=11pt, CJK]{scrartcl}	
+	
+\usepackage[english]{babel}
+%\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{ccmap}
+\usepackage{CJK}
+
+\usepackage{amsmath,amsfonts,amsthm}
+\usepackage[pdftex]{graphicx}
+%\usepackage{graphicx}
+\usepackage[bookmarks=true,
+            bookmarksopen=true,
+            colorlinks,
+            citecolor=blue,
+            linkcolor=blue,
+            urlcolor=blue,
+            breaklinks=true
+            ]{hyperref}
+\usepackage{breakurl}
+%\usepackage{hyperref}
+\usepackage[svgnames]{xcolor}
+\usepackage[top=15ex, bottom=15ex, left=15ex, right=15ex]{geometry}
+	\textheight=700px
+\usepackage{url}
+\usepackage{wrapfig}
+
+\frenchspacing
+\pagestyle{empty}		% No pagenumbers/headers/footers
+%\usepackage{bbding}	% Symbols
+
+
+\usepackage{sectsty}	% Custom sectioning
+
+\sectionfont{%			% Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%			% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{3pt}
+	}
+
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}			% Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+
+\newcommand{\MyName}[1]{
+		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1 		% Name
+		\par \normalsize \normalfont}
+		
+\newcommand{\MySlogan}[1]{
+		\large \usefont{OT1}{phv}{m}{n}\hfill #1 % Slogan (optional)
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\TableEntry}[2]{
+		\noindent\hangindent=2em\hangafter=0 	% Indentation
+		\parbox{\spacebox}{
+		\textit{#1}}							% Title (birth, address, skills, etc.)
+		\hspace{1.5em} #2 \par}					% Entry
+
+\newcommand{\MyDetailEntry}[2]{
+		\noindent \hangindent=0em\hangafter=0 #1 \hfill 	% Title
+		\colorbox{Grey}{%
+			\parbox{9em}{%
+		\color{White}\texttt{#2}}} \par						% Time
+%		\noindent \hangindent=3em\hangafter=0\textit{#3} \par		% Place, School, Company, etc.
+%		\noindent\hangindent=3em\hangafter=0 \small #4 			% Description
+		\normalsize \par}
+
+\newcommand{\DetailEntry}[4]{
+		\noindent \hangindent=0em\hangafter=0 \textbf{#1} \hfill 	% Title
+		\colorbox{Grey}{%
+			\parbox{9em}{%
+			\hfill\color{White} \texttt{#2}}} \par						% Time
+		\vspace{0.2em}
+		\noindent \hangindent=3em\hangafter=0\textit{#3} \par		% Place, School, Company, etc.
+		\noindent\hangindent=3em\hangafter=0 \small #4 			% Description
+		\normalsize \par}
+
+\newcommand{\BasicEntry}[3]{
+		\noindent \hangindent=2em\hangafter=0 \textbf{#1} \hfill 	% Title
+		\colorbox{Grey}{\parbox{9em}{\color{White}\texttt{#2}}} % Time
+        \par						
+		\vspace{0.2em}
+		\noindent\hangindent=3em\hangafter=0 \small #3 			% Description
+		\normalsize \par}
+
+\newcommand{\SimpleEntry}[2]{
+		\noindent \hangindent=2em\hangafter=0 {#1} \hfill 	% Description
+		\colorbox{Grey}{%
+			\parbox{3.6em}{%
+			\hfill\color{White}\texttt{#2}}} \par					% Time
+		%\hfill{\texttt{#2}}
+        \normalsize \par}
+
+\newcommand{\WordsEntry}[1]{
+		\noindent \hangindent=2em\hangafter=0 {#1} \hfill 	% Words
+		\normalsize \par}
+
+%作者，题名，期刊，年份
+\newcommand{\PaperEntry}[6]{
+        \par
+        \noindent \hangindent=0em\hangafter=0 {#1} {#2} \emph{#3} {\texttt{#4}} \hfill {#5}
+        \par
+        \hangindent=2em\hangafter=0
+        {\color{black!55}{{#6}}}
+        \vspace{0.2em}
+}
+
+%%% ------------------------------------------------------------
+%%% BEGIN DOCUMENT
+%%% ------------------------------------------------------------
+
+\begin{document}
+\begin{CJK*}{GBK}{kai}
+\begin{wrapfigure}{l}{0.5\textwidth}						%Insert a picture if needed
+	\vspace*{-5em}
+		\includegraphics[width=0.15\textwidth]{pic4}
+\end{wrapfigure}
+
+\MyName{Yifeng~~Zhang}
+\MySlogan{Tianjin University}
+
+\sepspace
+
+%%% Personal details
+\NewPart{Basic Information}{}
+\hangindent=2em\hangafter=0
+%Gender  :  Male，~~~~~~~~~~~Nationality  ： Han
+\vspace*{0.2em}
+
+\TableEntry{Gender}{\texttt{Male}}
+\TableEntry{Birth Date} {\texttt{1990-06-28}}
+\TableEntry{Mobile}{\texttt{(+86)159-2222-0617}}
+\TableEntry{Email}{\url{basaltzhang@gmail.com}}
+\TableEntry{Blog}{\url{http://blog.csdn.net/xuanwu_yan}}
+\TableEntry{}{}
+
+\NewPart{Job Intension}{}
+\begin{itemize}
+\item{{Machine Learning Engineer}}
+%\TableEntry{}{\texttt{Computer Vision Engineer}}
+\item{{Data Mining Engineer}}
+\item{{Recommendation System Engineer }}
+\end{itemize}
+
+%\TableEntry{计算机视觉算法工程师}
+%\MyDetailEntry{\textbf{机器学习工程师}}{}
+%%% Education
+\NewPart{Education Background}{}
+
+\MyDetailEntry{\textbf{Tianjin University}~~~~~~~~Computer Science and Technology~~~~~~Master~~~~~~}{2012/10 - 2015/01}
+\MyDetailEntry{\textbf{Tianjin University}~~~~~~~~Computer Science and Technology~~~~~~Bachelor~~~}{2008/09 - 2012/06}
+
+%%% Work experience
+
+%%% Honors
+\NewPart{Academic performance}{}
+
+\PaperEntry{\texttt{[1]} Wei Feng, Xuefei Yin, Yifeng Zhang, Lei Xie., {NestDE: Generic Parameters Tuning for Automatic Story Segmentation.}}{Soft Computing}{ 2014.}{}
+
+%{本文对提出一种基于相似性扩散的，协同显著性检测模型。首先，建立图像间和图像内的相似性图模型，然后，对于图像间的图模型应用匈牙利算法，进行二部图匹配；之后，进行相似性扩散；最后，生成协同显著性显著图。
+%利用本文提出的方法，克服了已有方法运行速度慢，对多目标协同显著性检测不准确，依赖于其他显著性检测方法等缺点。}
+
+%\PaperEntry{\texttt{[2]} Wei Feng ,\textbf{Zhiyu Tan}, Liang Wan , Jianmin Jiang.}{Adaptive Equalization of Perceptual Loudness.}{IEEE Signal Processing Letters(SPL).}{2013.}{(Submit.)}
+%{本文中，提出一种自适应的音频感知响度的估计与快速归一化方法。区别于已有算法在计算音频信号的能量值序列排序采用第95\%作为音频响度特征值，本文中提出一种自适应的采用信号能量序列中最长最稳定的序列作为音频响度特征值。}
+
+\PaperEntry{\texttt{[2]} }{Feng Wei, Sun Jizhou, Tian Feipeng, Luo Weiqun, Zhang Yifeng., {Camera four-point repositioning method orienting to detection on small change of cultural relics.}}{CN:201410085340:A}{2014.03.10}{}{}
+
+\PaperEntry{\texttt{[3]} }{Feng Wei, Sun Jizhou, Tian Feipeng, Luo Weiqun, Zhang Yifeng., {Camera three-point repositioning method orienting to submicron change detection of cultural relics.}}{CN:201410085396:A}{2014.03.10}{}
+
+\PaperEntry{\texttt{[5]} }{Feng Wei, Sun Jizhou, Zhang Yifeng, Huang Rui., {Method of marking diseases in ancient murals on basis of global dictionary features.}}{CN:201410843650:A}{2014.12.30}{}
+{}
+
+\PaperEntry{\texttt{[6]} }{Feng Wei, Sun Jizhou, Zhang Yifeng, Huang Rui., {Interactive ancient fresco disease identification method.}}{CN:201410841360:A}{2014.12.30}{}
+
+%{ 		Description：Design a software system to solve the problem of equalizing the audio with different perceptual loudness. Our algorithm is an adaptive method to which is improved by ReplayGain. Due to algorithm part suffering heavy computation, so we implement algorithm by C++.Consider of the need of cross-platform, its UI is implemented by wxpython.}{}
+
+\NewPart{Work Experiences}{}
+\MyDetailEntry{\textbf{1.Baidu Inc.}~~~~~~Image Searching Group~~ Team of Image Information~~~~Practice Algorithm Engineer }{2014/08 - 2014/10 }
+\textbf{ \\ Main Duty：}
+Participate in a project aiming to increase the precision rate between person image and corresponding name of famous stars, handling 10 million level image using Hadoop. Data mining with shell.
+
+\MyDetailEntry{\textbf{1.Meituan Inc.}~~~~~~Catering Business Group~~Transaction and Information Center~~~~Background Development Engineer }{2014/08 - 2014/10 }
+\textbf{ \\ Main Duty：}
+
+
+
+\NewPart{Skills}{}
+\begin{itemize}
+%\item Strong knowledge in machine learning and computer vision , familiar with deep learning.
+\item Strong knowledge in machine learning , familiar with deep learning.
+%\item Strong hack skills.
+%\item , image processing and computer vision.
+\item Proficient in~$\text{MATLAB}^{\text{\circledR}}$~、Python、C/C$++$.
+%\item 对数理统计，随机过程等有较强数学基础，对概率图模型及最优化有一定的了解。
+\item Strong mathematical foundation on stochastic process, mathematical statistics and matrix theory,basic understanding of probability graph model.
+\item Familiar with Hadoop.
+%\item Proficient in use of OpenCV
+%\item 具有良好的科研素质，能够独立发现并解决科研问题。
+\item Strong ability in English reading/writing.
+%\item 良好的团队合作精神和自学能力。
+\end{itemize}
+
+
+%%% Skills
+%\NewPart{获奖经历}{}
+%\SimpleEntry{博士研究生国家奖学金}{2012/12}
+%\SimpleEntry{教育部学术新人奖}{2011/08}
+%\SimpleEntry{天津大学二等奖学金}{2010/08}
+
+
+%\NewPart{Self Evaluation }{}
+%\begin{itemize}
+%\item    Strong interest in machine learning.
+%\item    Strong ability in implementing computer vision algorithm.
+%\item    Strong ability in quick learning , problem solving and hacking.
+%\item    Strong self-motivated and strong sense of responsibility.
+%\item    Strong ability in organization and strong sense of teamwork.
+%\end{itemize}
+
+\end{CJK*}
+\end{document}

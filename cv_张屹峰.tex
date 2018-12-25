@@ -121,7 +121,7 @@
 \begin{document}
 \begin{CJK*}{GBK}{kai}
 \begin{wrapfigure}{l}{0.5\textwidth}						%Insert a picture if needed
-	\vspace*{-5em}
+	\vspace*{-6em}
 		\includegraphics[width=0.15\textwidth]{pic4}
 \end{wrapfigure}
 
@@ -156,11 +156,17 @@
 \MyDetailEntry{\textbf{天津大学}~~~~~~~~计算机科学与技术学院~~ 计算机科学与技术~~工学学士}{2008/09 - 2012/06}
 
 \NewPart{工作背景}{}
-\MyDetailEntry{\textbf{1.百度}~~~~~~图片搜索部~~ 图片信息库组~~~~实习算法工程师 }{2014/08 - 2014/10 }
+\MyDetailEntry{\textbf{1.京东}~~~~大数据智能供应链事业部~~~数据业务创新部~~~高级算法工程师 }{2017/09 - 今}
 \textbf{ \\ 主要职责：}
 \begin{itemize}
-\item 参加搜索知心人物图片匹配项目，提升人物图片与姓名匹配率。基于Hadoop处理千万级别数据。
-\item 参与旅游子景点数据挖掘项目，调研业界常用方法，基于图片+文字识别子景点。
+\item 负责智能无人货柜算法部分实现，后期主要负责识别算法与特征模型；
+\item 曾负责拍照购/AR扫识别算法与特征模型。
+\end{itemize}
+\MyDetailEntry{\textbf{2.美团网}~~~~酒旅平台事业群~~~智能信息中心~~机器学习组~~~算法开发工程师 }{2016/02 - 2017/08}
+\textbf{ \\ 主要职责：}
+\begin{itemize}
+\item 负责图片质量排序算法以及相关项目研发；
+\item 负责图片特征提取算法。
 \end{itemize}
 \MyDetailEntry{\textbf{2.美团网}~~~~到店餐饮平台~~~交易与信息中心 ~~~信息组~~~~后台研发工程师 }{2015/02 - 2016/02 }
 \textbf{ \\ 主要职责：}
@@ -169,16 +175,17 @@
 \item 负责美团点评促销活动后台；
 \item 负责美团网~ApiDiffy~回归测试平台。
 \end{itemize}
-\MyDetailEntry{\textbf{2.美团网}~~~~酒旅平台事业群~~~智能信息中心~~机器学习组~~~算法开发工程师 }{2016/02 - 今}
+\MyDetailEntry{\textbf{3.百度}~~~~~~图片搜索部~~ 图片信息库组~~~~实习算法工程师 }{2014/08 - 2014/10 }
 \textbf{ \\ 主要职责：}
 \begin{itemize}
-\item 负责图片质量排序算法以及相关项目研发；
-\item 负责图片特征提取算法。
+\item 参加搜索知心人物图片匹配项目，提升人物图片与姓名匹配率。基于Hadoop处理千万级别数据。
+\item 参与旅游子景点数据挖掘项目，调研业界常用方法，基于图片+文字识别子景点。
 \end{itemize}
+
 %\NewPart{个人技能}{}
 
 %\begin{itemize}
-%\item 精通~$\text{MATLAB}^{\text{\circledR}}$~、Python、C/C$++$语言。
+%\item 精通~$\text{MATLAB}^{\text{\circledR}}$~、Python、C/C$++$ 语言。
 %\item 熟悉Linux 下C/C++ 编程；熟悉java，php，python及matlab编程。
 %\item 熟悉基本的机器学习算法，推荐算法和搜索算法。
 %\item 扎实的数据结构，算法以及数理统计相关知识基础。
@@ -192,7 +199,7 @@
 %\item 熟悉大数据海量信息处理工具，对MapReduce有基本了解。
 %\item 熟练掌握图像处理、计算机视觉、模式识别方向的基本算法，并能应用到相关课题中。
 %对CUDA~ 并行编程模型有较深理解，能够胜任常见的多核、GPU~ 编程需要。
-    %精通~$\text{MATLAB}^{\text{\circledR}}$~、Python、C/C$++$语言，能够胜任相关论文及最前沿技术的重现工作。对多线程、CUDA~ 等并行编程模型有较深理解，能够胜任常见的多核、GPU~ 编程需要。
+    %精通~$\text{MATLAB}^{\text{\circledR}}$~、Python、C/C$++$ 语言，能够胜任相关论文及最前沿技术的重现工作。对多线程、CUDA~ 等并行编程模型有较深理解，能够胜任常见的多核、GPU~ 编程需要。
 %\item 熟练掌握CUDA并行编程技术,熟练使用OpenCV等开发工具.
 %\item 在数理统计，随机过程方面有扎实数学基础，对概率图模型，矩阵论及最优化有基本了解。
 
@@ -202,20 +209,25 @@
 %%% Work experience
 
 \NewPart{项目经历}{}
-\PaperEntry{\texttt{[1]}  \textbf{美团算法开发} }  {( 2016.2--今)}{\\}
+\PaperEntry{\texttt{[1]}  \textbf{京东算法开发} }  {}{\\}
+{·\textbf{智能无人货柜}：支持两百+种商品，当前部署约四百+台，图像异常单低于~1\%；\\
+·\textbf{拍照购/AR扫}：优化现有模型，top1准确率70\%提升至78\%。
+}{\\}
+
+\PaperEntry{\texttt{[2]}  \textbf{美团算法开发} }  {}{\\}
 {·\textbf{负责美团首图优化}：基于~Caffe~的~Pointwise~模型与基于~TensorFlow~的~Pairwise~模型对美团各个业务线首图优化，如在搜索等结果列表中显示商家高质量图片，美团头条自动选图中，提升用户点击率与访购率，降低运营成本；\\
 ·\textbf{负责图片特征提取}：结合图片高级与低级特征，使用浅层神经网络提取图片特征，优化广告点击率。
 }{\\}
 
-\PaperEntry{\texttt{[2]} \textbf{美团后台开发} } {(2015.2--2016.2)}{\\}
+\PaperEntry{\texttt{[3]} \textbf{美团后台开发} } {}{\\}
 {·\textbf{负责美团回归测试平台}：该平台用于测试、监控API正确性：(1)Web页面操作，无需编写代码。(2)支持http json和thrift接口。(3)完善的监控、报警措施。(4)基于JsonSchema和结果两种校验方式。\\
 ·\textbf{负责美团点评促销活动后台}：主要负责：(1)重构点评后台，从基于事件迭代到基于类型迭代。(2)基于Spring MVC搭建美团活动后台。\\
 ·\textbf{负责美团主站城市商圈}：(1)拆分主站对数据库写入。(2)收敛主站对数据库依赖。(3)开发Java项目读取DB，使用thrift接口向主站PHP提供数据接口。}{\\}
 
-\PaperEntry{\texttt{[3]}  \textbf{网络差分进化算法} } {(2013.10--2014.8)}{\\}
+\PaperEntry{\texttt{[4]}  \textbf{网络差分进化算法} } {}{\\}
 {对给定最小化目标函数与变量值域的基础上，快速选择最优变量值得到最优解。与传统的模拟退火(SA)和差分进化(DE)相比，网络差分进化(Nest Differential Evolution, NestDE)收敛速度快，不已陷入局部最优。减少算法搜索空间，增加算法收敛速度。论文发表在SCI三区期刊。}{\\}
 
-\PaperEntry{\texttt{[4]}  \textbf{利用超像素加速稀疏编码模型}}  {( 2013.6--2015.1)}{\\}
+\PaperEntry{\texttt{[5]}  \textbf{利用超像素加速稀疏编码模型}}  {}{\\}
 { 参与天津市科技支撑项目“古代壁画典型病害微小变化检测与度量关键技术”项目。负责项目中利用稀疏编码进行的交互式病害区域标识相关课题，设计了一种新的使用稀疏编码进行快速特定病害识别的模型。专利~4~篇。} {\\}
 
 
